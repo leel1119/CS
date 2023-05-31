@@ -59,5 +59,20 @@ namespace Ch01_P15_OP_EX
             tb_Num2.BackColor = Color.LightGreen;
             tb_result.BackColor = Color.Aqua;
         }
+
+        private void rb_add_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_Num2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rb_mul_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

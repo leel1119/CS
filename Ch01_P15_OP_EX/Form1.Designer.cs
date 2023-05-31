@@ -85,6 +85,7 @@
             this.tb_Num2.Name = "tb_Num2";
             this.tb_Num2.Size = new System.Drawing.Size(100, 22);
             this.tb_Num2.TabIndex = 1;
+            this.tb_Num2.TextChanged += new System.EventHandler(this.tb_Num2_TextChanged);
             // 
             // tb_result
             // 
@@ -145,6 +146,7 @@
             this.rb_mul.TabIndex = 0;
             this.rb_mul.Text = "乘法";
             this.rb_mul.UseVisualStyleBackColor = true;
+            this.rb_mul.CheckedChanged += new System.EventHandler(this.rb_mul_CheckedChanged);
             // 
             // rb_sub
             // 
@@ -167,6 +169,7 @@
             this.rb_add.TabStop = true;
             this.rb_add.Text = "加法";
             this.rb_add.UseVisualStyleBackColor = true;
+            this.rb_add.CheckedChanged += new System.EventHandler(this.rb_add_CheckedChanged);
             // 
             // Form1
             // 
