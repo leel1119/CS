@@ -17,7 +17,7 @@ namespace Ch03_P68_ImplicitTypeConvert_Demo
             long lValue;
 
             lValue = iValue;
-            Console.WriteLine(lValue + " = " + iValue);
+            Console.WriteLine("lValue = " + lValue +"\n" + "iValue= " + iValue);
             
             fValue = iNum + 123.45f;
             Console.WriteLine("fValue = " +  fValue);
