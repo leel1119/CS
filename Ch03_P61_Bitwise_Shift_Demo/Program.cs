@@ -30,6 +30,9 @@ namespace Ch03_P61_Bitwise_Shift_Demo
             Console.WriteLine("f <<1 = " + (f<<1));
             Console.WriteLine("f >>2 = " + (f>>2));
 
+            int x = ~4; //P80頁 bitwise operators
+            Console.WriteLine("~4 is" + x); //-5
+
             Console.ReadLine();
 
         }
