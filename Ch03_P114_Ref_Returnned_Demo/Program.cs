@@ -11,7 +11,7 @@ namespace Ch03_P114_Ref_Returnned_Demo
         static void Main(string[] args)
         {
             int[] items = { 11, 2, 35, 40, 42 };
-            int itemToFind;
+            int itemToFind; 
             foreach (int i in items) Console.Write(i + "\t");      
             Console.WriteLine("\n Please Enter the value to be found : ");
             itemToFind = Convert.ToInt32(Console.ReadLine());
@@ -23,7 +23,7 @@ namespace Ch03_P114_Ref_Returnned_Demo
         }
         static ref int FindItem(int findValue, int[] theArray)
         {
-            int pos = -1;
+            //int pos = -1;
             int idx = 0;
             for (idx = 0; idx < theArray.Length; idx++) 
             {
