@@ -15,19 +15,24 @@ namespace Profit_commission
             Console.WriteLine("請輸入利潤:");
             Profit = Convert.ToInt32(Console.ReadLine());
 
-            if (Profit < 100000)
+            if (Profit <= 100000)
             {
                 ans = Profit / 10;
                 Console.WriteLine("可提抽成為:" + ans);
             }
-            else if (100000 < Profit && Profit < 200000)
+            else if (100000 < Profit && Profit <= 200000)
             {
-                ans = (Profit-100000) * 0.75 + (100000/10);
+                ans = (Profit-100000) * 0.075 + (100000/10);
                 Console.WriteLine("可提抽成為:" + ans);
             }
-            else if (200000 < Profit && Profit < 400000)
+            else if (200000 < Profit && Profit <= 400000)
             {
-                ans = (Profit - 400000) * 0.05 + (Profit - 200000) + (100000 / 10);
+                ans = (Profit - 200000) * 0.05 + 100000 * 0.075 + (100000 / 10);
+                Console.WriteLine("可提抽成為:" + ans);
+            }
+            else 
+            {
+                ans = (Profit - 400000 ) * 0.03 + 200000 * 0.05 + 100000 * 0.075 + (100000 / 10);
                 Console.WriteLine("可提抽成為:" + ans);
             }
 
