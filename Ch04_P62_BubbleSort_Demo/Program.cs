@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -42,6 +43,21 @@ namespace Ch04_P62_BubbleSort_Demo
                         arr[inner+1] = temp;
                     }
                 }
+            }
+        }
+        public void insertSort()
+        {
+            int temp = 0;
+            int inner;
+            for (int outer = 1; outer < numElements; outer++)
+            {
+                temp = arr[outer];
+                for (inner = outer; inner > 0 && arr[inner - 1] >= temp; inner--)
+                {
+                    arr[inner] = arr[inner - 1];
+                        
+                }
+                arr[inner] = temp;
             }
         }
         public void SelectSort()
@@ -96,6 +112,9 @@ namespace Ch04_P62_BubbleSort_Demo
             nums.DisplayElements();
             Console.WriteLine();
             nums.SelectSort();
+            nums.DisplayElements();
+            Console.WriteLine();
+            nums.insertSort();
             nums.DisplayElements();
             Console.ReadLine();
         }
