@@ -11,26 +11,23 @@ namespace EXAM_ALL02
         static void Main(string[] args)
         {
             int i = 1;
-            int j = 1;
-            int oddPositive = 0, oddNagtive = 0, oddSum = 0;
-            int evenPositive = 0, evenNagtive = 0, evenSum = 0;
-            while ((2 * i - 1) < 100)
+            int sum = 0;
+            do 
             {
-                oddPositive= (2 * i - 1) * (2 * (i + 1) - 1) * (2 * (i + 2) - 1) * (2 * (i + 3) - 1);
-                oddNagtive = (2 * (i+1) - 1) * (2 * (i + 2) - 1) * (2 * (i + 3) - 1) * (2 * (i + 4) - 1);
-                oddSum = oddPositive - oddNagtive;
-                i = i + 2;
-
-            }
-            while (2 * j <= 100)
-            {
-                evenNagtive = (2 * j) * (2 * (j + 1)) * (2 * (j + 2)) * (2 * (j + 3));
-                evenPositive = (2 * (j + 1)) * (2 * (j + 2)) * (2 * (j + 3)) * (2 * (j + 4));
-                evenSum = evenNagtive + evenPositive;
-                j = j + 2;
-            }
-            Console.WriteLine($"oddSum = {oddSum}, evenSum = {evenSum}");
-            Console.WriteLine($"TotalSum = {oddSum - evenSum}");
+                switch (i % 4)
+                { 
+                    case 0:
+                    case 1:
+                        sum += i * (i + 2) * (i + 4) * (i + 6);
+                        break;
+                    case 2:
+                    case 3:
+                        sum -= i * (i + 2) * (i + 4) * (i + 6);
+                        break;
+                }
+                i++;
+            }while (i <= 100);
+            Console.WriteLine($"TotalSum = {sum}");
             Console.ReadLine();
         }
     }

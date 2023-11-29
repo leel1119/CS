@@ -9,49 +9,31 @@ class Program
 
     static void PrintPattern(int height)
     {
-        int i = 0;
-        while (i < height)
+        int row = 0;
+        while(row <= 4)
         {
-            int j = 0;
-
-            while (j < i)
+            int col = 0;
+            while (col <= 8)
             {
-                Console.Write("  ");
-                j++;
+                if (Math.Abs(col - 4) <= (4 - row)) Console.Write("*");
+                else Console.Write(" ");
+                col++;
             }
-
-            j = 0;
-            while (j < 2 * (height - i) - 1)
-            {
-                Console.Write("*");
-                j++;
-            }
-
             Console.WriteLine();
-            i++;
+            row++;
         }
-
-        i = height - 2;
-        while (i >= 0)
+        row = 0;
+        while(row <= 3) 
         {
-            int j = 0;
-
-
-            while (j < i)
+            int col = 0;
+            while (col <= 8) 
             {
-                Console.Write("  ");
-                j++;
+                if (Math.Abs(col - 4) <= (row + 1)) Console.Write("*");
+                else Console.Write(" ");
+                col++;
             }
-
-            j = 0;
-            while (j < 2 * (height - i) - 1)
-            {
-                Console.Write("*");
-                j++;
-            }
-
             Console.WriteLine();
-            i--;
+            row++;
         }
         Console.ReadLine();
     }
